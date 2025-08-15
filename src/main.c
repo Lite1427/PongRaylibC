@@ -16,7 +16,7 @@ s32 player_score = 0;
 s32 cpu_score = 0;
 
 extern unsigned char game_icon[];
-extern unsigned int game_icon_length;
+extern unsigned int game_icon_len;
 
 int main(void){
     InitWindow(W_WIDTH, W_HEIGHT, "Pong Raylib");
@@ -40,7 +40,7 @@ int main(void){
         .colour = WHITE
     };
 
-    Image icon = LoadImageFromMemory(".png", game_icon, game_icon_length);
+    Image icon = LoadImageFromMemory(".png", game_icon, game_icon_len);
     SetWindowIcon(icon);
 
     PlayerPaddleDefaultSetting(&player);

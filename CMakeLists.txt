@@ -8,6 +8,6 @@ include_directories(include)
 link_directories(lib)
 file(GLOB SOURCE_FILES "src/*.c")
 
-add_executable(PongRaylib WIN32 ${SOURCE_FILES} program.rc)
-target_link_libraries(PongRaylib raylib opengl32 gdi32 winmm)
+add_executable(PongRaylib ${SOURCE_FILES} program.rc)
+target_link_libraries(PongRaylib raylib)
 target_compile_definitions(PongRaylib PRIVATE GAME_THEME=0)
